@@ -1,166 +1,149 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
     <title>ITE F25</title>
     <link rel="icon" type="car-icon" href="/data/car.png">
+    <style>
+        body {
+            background: linear-gradient(90deg, pink, rgb(228, 94, 228));
+            margin: 0;
+                        
+        }
+
+        /* Header table */
+        #header {
+            width: 57%;
+            height: 50px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 14px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: rgb(227,12,12);
+            text-align: center;
+        }
+
+        /* Select Service button */
+        label[for="toggle"] {
+            position:fixed;
+            top: 90px;
+            left: 575px;
+            text-align: center;
+            padding: 10px 20px;
+            margin: 20px auto;
+            width:20%;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(12px);
+            cursor: pointer;
+        }
+
+        /* Glass-effect table */
+        #table1 {
+            position: fixed;
+            top: 200px;
+            left: 370px;
+            padding: 5;
+            width: 50%;
+            height: 30%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            
+            text-align: left;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #000;
+            display: none;
+            animation: pulse 2s infinite;
+        }
+
+        #table1 td {
+    font-size: 20px; 
+    padding: 12px;   
+    }
+
+        /* CSS-only toggle */
+        #toggle:checked + label + #table1 {
+            display: table;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            position: fixed;
+            bottom: 10px;
+            left: 0;
+           
+            
+        }
+
+        footer table img {
+            vertical-align: middle;
+        }
+    </style>
 </head>
 
-<style>
-
-body{
-    background: linear-gradient( 45deg , pink ,rgb(228, 94, 228) );
+<body>
+    <!-- Header -->
+     
+    <table id="header">
+        <tr>
+            <td>
+                <font size="3">THE NATIONAL SCHOOL OF ARTIFICIAL INTELLIGENCE</font>
+            </td>
+        </tr>
+    </table>
     
 
-}
+    <!-- CSS toggle -->
+     
+    <input type="checkbox" id="toggle" style="display:none;">
+    <label for="toggle"><font face="papyrus"  size="5" >Select a Service</font></label>
 
-
-
-
-
-</style>
-
-<body>
-    <br>
-    <center>
-        <table style="border-collapse: collapse; background: rgba(255, 255, 255, 0.25);
-         backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 14px; overflow: hidden;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.3); color: #fff;  color: rgb(227, 12, 12);" width="57%" height="50">
-
-            <tr>
-                <td align="center">
-                    <font  face="Papyrus" size="3">
-                        THE NATIONAL SCHOOL OF ARTIFICIAL INTELLIGENCE
-                    </font>
-                </td>
-            </tr>
-        </table>
-    </center>
-    <br><br>
-    <b>
-        <font face="Papyrus" size="6">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Select a Service:
-        </font>
-    </b>
-
-    <table align="center" border="0" cellpadding="15" cellspacing="0">
+    <!-- Table with services -->
+    <table id="table1" >
         <tr>
-            <td align="left">
-                <font size="5" align="left">💻</font>
-                <a href="win95.html"><b>
-                        <font size="5" face="Papyrus">
-                            Use Window 95
-                        </font>
-                    </b></a>
-            </td>
+            <td>💻 <a href="win95.html"><b>Use Window 95</b></a></td>
         </tr>
         <tr>
-            <td align="left">
-                <font size="5" align="left">💻</font>
-                <a href="tetris.html"><b>
-                        <font size="5" face="Papyrus">
-                            Play Tetris
-                        </font>
-                    </b></a>
-            </td>
+            <td>💻 <a href="tetris.html"><b>Play Tetris</b></a></td>
         </tr>
         <tr>
-            <td align="left">
-                <font size="5" align="left">💻</font>
-                <a href="dogpileengine.html"><b>
-                        <font size="5" face="Papyrus">
-                            Use dögpile Web Search Engine
-                        </font>
-                    </b></a>
-            </td>
+            <td>💻 <a href="dogpileengine.html"><b>Use dögpile Web Search Engine</b></a></td>
         </tr>
         <tr>
-            <td align="left">
-                <font size="5" align="left">💻</font>
-                <a href="emulator.html"><b>
-                        <font size="5" face="Papyrus">
-                            Try the 8086 Online EMULATOR
-                        </font>
-                    </b></a>
-            </td>
+            <td>💻 <a href="emulator.html"><b>Try the 8086 Online EMULATOR</b></a></td>
         </tr>
         <tr>
-            <td align="left">
-                <font size="5" align="left">💻</font>
-                <a href="watchlecture12.html"><b>
-                        <font size="5" face="Papyrus">
-                            Try to Watch ITE Lecture 12
-                        </font>
-                    </b></a>
-            </td>
+            <td>💻 <a href="watchlecture12.html"><b>Try to Watch ITE Lecture 12</b></a></td>
         </tr>
         <tr>
-            <td align="left">
-                <font size="5" align="left">💻</font>
-                <a href="deadcalc.html"><b>
-                        <font size="5" face="Papyrus">
-                            Use Dead Calculator
-                        </font>
-                    </b></a>
-            </td>
+            <td>💻 <a href="deadcalc.html"><b>Use Dead Calculator</b></a></td>
         </tr>
-
     </table>
 
-    <br>
-    <br>
-
-    <marquee direction="right"><img src="/data/running.gif" width="150"></marquee>
+    <!-- Footer -->
     <footer>
-    <center>
-        <p align="center">
-
-            <br>
-        <table cellpadding="5">
-            <tr>
-                <td>
-                    <font face="Papyrus" size="5"><b>Google Services :</b></font>
-                </td>
-
-                <td>
-                    <a href="https://earth.google.com/web" target="_blank">
-                        <img src="/data/earth.png" height="35" width="35">
-                    </a>
-                </td>
-
-                <td>
-                    <a href="https://www.google.com/chrome/" target="_blank">
-                        <img src="/data/chrome.png" height="35" width="35">
-                    </a>
-                </td>
-
-                <td>
-                    <a href="https://edu.google.com/workspace-for-education/products/classroom/" target="_blank">
-                        <img src="/data/classroom.png" height="35" width="35">
-                    </a>
-                </td>
-
-                <td>
-                    <a href="https://mail.google.com/mail/" target="_blank">
-                        <img src="/data/mail.png" height="35" width="35">
-                    </a>
-                </td>
-
-                <td>
-                    <a href="https://www.youtube.com/" target="_blank">
-                        <img src="/data/ytb.png" height="35" width="35">
-                    </a>
-                </td>
-            </tr>
-        </table>
-
-
-
-
-        </p>
-    </center>
+        <marquee direction="right"><img src="/data/running.gif" width="150"></marquee>
+        <center>
+            <table cellpadding="5">
+                <tr>
+                    <td><b><font  face=papyrus size="5">Google Services :</font></b></td>
+                    <td><a href="https://earth.google.com/web" target="_blank"><img src="/data/earth.png" height="35"></a></td>
+                    <td><a href="https://www.google.com/chrome/" target="_blank"><img src="/data/chrome.png" height="35"></a></td>
+                    <td><a href="https://edu.google.com/workspace-for-education/products/classroom/" target="_blank"><img src="/data/classroom.png" height="35"></a></td>
+                    <td><a href="https://mail.google.com/mail/" target="_blank"><img src="/data/mail.png" height="35"></a></td>
+                    <td><a href="https://www.youtube.com/" target="_blank"><img src="/data/ytb.png" height="35"></a></td>
+                </tr>
+            </table>
+        </center>
     </footer>
 </body>
-
 </html>
